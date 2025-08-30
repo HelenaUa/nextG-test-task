@@ -6,12 +6,315 @@
     <meta name="viewport" content="width=device-width>, initial-scale=1.0" />
     <title>NextG</title>
     <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    <header>Привіт!</header>
-    <main>Gulp працює, SCSS підключений, JS теж!</main>
-    <footer>🎉</footer>
+<body class="container">
+    <header class="header">
+        <div class="container header__container">
+            <a href=".index.html"><div class="logo"></div></a>
+            <nav class="header-menu">
+                <ul class="header-nav">
+                    <li>
+                        <a class="header-nav__link header-nav__link--active" href="./index.html">Home</a>
+                    </li>
+                    <li>
+                        <a class="header-nav__link">About</a>
+                    </li>
+                    <li>
+                        <a class="header-nav__link">Product</a>
+                    </li>
+                    <li>
+                        <a class="header-nav__link">Contact</a>
+                    </li>
+                    <li>
+                        <a class="header-nav__link">History</a>
+                    </li>
+                </ul>
+            </nav>
+            <button class="header-btn-contact">Contact us</button>
+            <button class="header-btn js-open-menu" type="button" aria-expanded="false" aria-controls="mobile-menu">
+                <svg width="40" height="40">
+                    <use href="./images/icons.svg#icon-menu"></use>
+                </svg>
+            </button>
+        </div>
+    </header>
+    <main>
+        <section class="protective">
+            <ul class="protective-list">
+                <li class="protective-h1">
+                    <p class="protective-p-orange">3M N95 masks</p>
+                    <h1>Protective Face Masks</h1>
+                    <p>We offer the fast delivery wholesale selection of N95 masks and surgical masks,
+                        featuring FDA-approved quality and 2 – 5 days delivery, our wholesale face masks
+                        are ideal for influenza or novel coronavirus prevention.
+                    </p>
+                    <div class="protective-button-wrapper">
+                       <button>Shop now</button>
+                       <button class="protective-button-orange">Learn more</button>
+                    </div>
+                </li>
+                <li>
+                    <div class="protective-image-wrapper">
+                        <img class="bg" src="images/mask-group.png" alt="photo of a woman in a mask">
+                        <img class="woman" src="images/woman.jpg">
+                    </div>
+                    
+                </li>
+            </ul>       
+        </section>
+        <section class="container">
+            <ul class="benefit">
+                <li class="benefit-item">
+                    <div class="benefit__box">
+                        <svg class="benefit__icon">
+                            <use href="./images/icons.svg#icon-antenna"></use>
+                        </svg>
+                    </div>
+                    <h3>Full-Service Shipping</h3>
+                    <p class="benefit-text">From picking to custom-crating to domestic and international shipping, we handle it all for you.</p>
+                </li>
+                <li class="benefit-item">
+                    <div>
+                        <svg>
+                            <use href=""></use>
+                        </svg>
+                    </div>
+                    <h3>Multi-Point Inspection</h3>
+                    <p class="benefit-text">To ensure quality, our team of HTM professionals fully assess and evaluate all equipment.</p>
+                </li>
+                <li class="benefit-item">
+                    <div>
+                        <svg>
+                            <use href=""></use>
+                        </svg>
+                    </div>
+                    <h3>Professional Product Support</h3>
+                    <p class="benefit-text">If you have any questions about the equipment, our product specialists are here to help.</p>
+                </li>
+                <li class="benefit-item">
+                    <div>
+                        <svg>
+                            <use href=""></use>
+                        </svg>
+                    </div>
+                    <h3>Secure and Easy Payment Methods</h3>
+                    <p class="benefit-text">Pay your way, whether by credit card, PayPal or the redemption of earned credits.</p>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <ul class="respirators-list">
+                <li class="respirators-item">
+                    <img src="images/medical-workers-1.png" alt="female medical worker">
+                    <div class="respirators-wrapper-text">
+                        <h2>N95 Respirators</h2>
+                        <p class="respirators-text">
+                            <strong>The N95 mask</strong> is a form of respiratory protective wear worn over the nose and mouth to help minimise the chance of
+                            inhaling airborne particles like viruses and other germs. It is a disposable mask made from synthetic polymer fibres
+                            produced in a highly specialised process called melt blowing. During this process, the inner layer of the N95 mask is
+                            created which forms the filtration layer capable of filtering out at <strong>least 95%</strong> of airborne particles when worn
+                            correctly.
+                            <br>
+                            <br>
+                            During outbreaks of respiratory illnesses and during periods of intense air pollution, wearing <strong>N95 masks</strong> has been shown
+                            to help reduce the inhalation of compromised air, filtering out nasty pathogens which lead to illness or which can
+                            aggravate existing respiratory problems. Maintaining clear and unhindered respiration is vitally important for remaining
+                            fit and healthy and people with pre-existing conditions or respiratory fragility can particularly benefit from wearing
+                            face masks while they are out in public and unable to control the breathing environments that they find themselves in.
+                        </p>
+                    </div>
+                </li>
+                <li class="respirators-item">
+                    <div class="respirators-wrapper-text">
+                        <h2>N95 Respirators In Industrial And Health Care Settings</h2>
+                        <p class="respirators-text">
+                            Most <strong>N95 respirators</strong> are manufactured for use in construction and other industrial type jobs that expose workers to dust
+                            and small particles. They are regulated by the National Personal Protective Technology Laboratory (NPPTL) in the
+                            National Institute for Occupational Safety and Health (NIOSH), which is part of the Centers for Disease Control and
+                            Prevention (CDC).
+                            <br>
+                            <br>
+                            However, some N95 respirators are intended for use in a health care setting. Specifically, single-use, disposable
+                            respiratory protective devices used and worn by health care personnel during procedures to protect both the patient and
+                            health care personnel from the transfer of microorganisms, body fluids, and particulate material. These surgical N95
+                            respirators are class II devices regulated by the FDA, under 21 CFR 878.4040, and CDC NIOSH under 42 CFR Part 84.
+                        </p>
+                    </div>
+                    <img src="images/medical-workers-2.png" alt="male medical worker">
+                </li>
+            </ul>
+        </section>
+        <section>
+            <ul class="made-in">
+                <li class="made-in-wrapper">
+                    <img  src="images/made-in.png" alt="medical workers in masks">
+                    <div class="made-in-blue-rec-1">
+                        <p class="made-in-blue-rec-text">
+                            Given the praised reputation and reliable quality within the industry, we have also established preliminary business
+                            agreements with some hospitals, local governments and medical institutions in Guangdong Province.
+                        </p>
+                    </div>
+                </li>
+                <li class="made-in-wrapper-2">
+                    <div class="made-in-wrapper-white-blue">
+                        <div class="made-in-white-rec">
+                            <p class="made-in-white-rec-text">
+                               After years of development, Health Pro has reached stable long-term cooperation with many hospitals and medical
+                               institutions in Hong Kong.
+                            </p>
+                        </div>
+                        <div class="made-in-blue-rec">
+                            <p class="made-in-blue-rec-text">
+                                We are keenly looking forward to expand our market in Mainland China and overseas in the future, as we have strong
+                                beliefs in our products.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="made-in-orange-rec">
+                        <div class="made-in-orange-rec-text">
+                            <h3 class="made-in-orange-rec-title">Proudly Made in Hong Kong</h3>
+                            <p class="made-in-orange-rec-p">
+                               Our factory is located in Hong Kong.
+                               <br>
+                               Equipped with machines and assembly line of the best quality on the market to ensure quality control.
+                            </p>
+                        </div>
+                        <div class="made-in-wrapper-button">
+                            <button class="made-in-button">Learn more</button>
+                            <div>
+                                <!-- <svg></svg> -->
+                                <p class="made-in-contact-text">Contact us</p>
+                                <a class="made-in-phone" href="tel:+11234445678">+1 123 444 5678</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <div class="certification">
+                <p class="certification-text">Our Lab Certification</p>
+                <svg></svg>
+                <svg></svg>
+                <svg></svg>
+            </div>
+        </section>
+        <section>
+            <ul class="reasons">
+                <li>
+                    <img src="images/reasons.png" alt="mask">
+                </li>
+                <li>
+                    <div class="reasons-wrapper-text">
+                        <h2>Reasons To Choose Our Products</h2>
+                        <p class="respirators-text">
+                           All products of Health Pro have obtained the certifications issued by national specialized agencies and testing
+                           laboratories.
+                           They have also passed the quality inspection of several international famous testing institutions. We have absolute
+                           confidence that every product of Health Pro is a of the top quality.
+                        </p>
+                    </div>
+                    <div class="grid-container">
+                        <div class="item">
+                            <!-- <svg></svg> -->
+                            <div class="reasons-wrapper-item">
+                                <h3>Industry leader</h3>
+                                <p>
+                                   If you have any questions about the equipment, our product specialists are here to help, specialists are here.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <!-- <svg></svg> -->
+                            <div class="reasons-wrapper-item">
+                                <h3>Innovation 3 led development</h3>
+                                <p>
+                                    If you have any questions about the equipment, our product specialists are here to help.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <!-- <svg></svg> -->
+                            <div class="reasons-wrapper-item">
+                                <h3>To create a safer tomorrow for all</h3>
+                                <p>
+                                   If you have any questions about the equipment, our product specialists are here to help.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <!-- <svg></svg> -->
+                            <div class="reasons-wrapper-item">
+                                <h3>To protect and to improve living quality for all</h3>
+                                <p>
+                                   If you have any questions about the equipment, our product specialists are here to help.
+                                </p>
+                            </div>
+                        </div>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <img>
+        </section>
+        <section>
+            <div class="step">
+                <h2>Get One Step Ahead Of Disease</h2>
+                <div class="step-text">
+                    <p>
+                       Imperdiet aliquet est vel nulla turpis eu consequat ullamcorper a egestas suspendisse faucibus eu velit, phasellus
+                       pulvinar lorem et libero et tortor, sapien nulla.
+                    </p>
+                </div>
+                <button>Shop now</button>
+            </div>
+        </section>
+        <section>
+            <div >
+                <ul class="address">
+                    <li>
+                        <!-- <svg></svg> -->
+                        <div class="address-wrapper">
+                            <h3>Address</h3>
+                            <a class="address-link" href="https://goo.gl/maps/U55JzRCZsnBUYqKL8">123 5th Avenue, New York, US</a>
+                        </div>
+                    </li>
+                    <li>
+                        <!-- <svg></svg> -->
+                        <div class="address-wrapper">
+                            <h3>Call Us</h3>
+                            <a class="address-link" href="tel:+11234567890">+1 123 456 7890</a>
+                        </div>
+                    </li>
+                    <li>
+                        <!-- <svg></svg> -->
+                        <div class="address-wrapper">
+                            <h3>Email Us</h3>
+                            <a class="address-link" href="mailto:info@example.com">info@example.com</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section>
+            <img>
+        </section>
+    </main>
+    <footer>
+        <div>
+            <span>
+                Copyright<div></div>2020 N95
+            </span>
+        </div>
+    </footer>
     <script src="js/main.js"></script>
 </body>
 </html>

@@ -31,6 +31,13 @@ function html() {
     .pipe(browserSync.stream());
 }
 
+// IMAGES (просто копіювання, без оптимізації)
+function images() {
+  return gulp.src("src/images/**/*")
+    .pipe(gulp.dest("dist/images"))
+    .pipe(browserSync.stream());
+}
+
 // Сервер
 function serve() {
   browserSync.init({
@@ -42,7 +49,12 @@ function serve() {
   gulp.watch("src/scss/**/*.scss", styles);
   gulp.watch("src/js/**/*.js", scripts);
   gulp.watch("src/**/*.html", html);
+  // gulp.watch("src/images/**/*", images);
 }
 
-exports.default = gulp.series(gulp.parallel(styles, scripts, html), serve);
+exports.default = gulp.series(
+  gulp.parallel(styles, scripts, html, images),
+  serve
+);
+
 
