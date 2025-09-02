@@ -14,7 +14,7 @@
 
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="container">
+<body>
     <header class="header">
         <div class="container header__container">
             <a href=".index.html"><div class="logo"></div></a>
@@ -38,16 +38,14 @@
                 </ul>
             </nav>
             <button class="header-btn-contact">Contact us</button>
-            <!-- <button class="header-btn js-open-menu" type="button" aria-expanded="false" aria-controls="mobile-menu">
-                <svg width="40" height="40">
-                    <use href="./images/icons.svg#icon-menu"></use>
-                </svg>
-            </button> -->
+            <button class="header-btn-burger js-open-menu" type="button" aria-expanded="false" aria-controls="mobile-menu">
+                <span class="burger-line"></span>
+            </button>
         </div>
     </header>
     <main>
         <section class="protective">
-            <ul class="protective-list">
+            <ul class="container protective-list">
                 <li class="protective-h1">
                     <p class="protective-p-orange">3M N95 masks</p>
                     <h1>Protective Face Masks</h1>
@@ -68,9 +66,8 @@
                 </li>
             </ul>   
         </section>
-        
-        <section >
-            <ul class="benefit">
+        <section>
+            <ul class="benefit container">
                 <li class="benefit-item">
                     <svg class="benefit-icon">
                         <use href="images/sprite.svg#icon-box"></use>
@@ -110,9 +107,9 @@
             </ul>
         </section>
         <section>
-            <ul class="respirators-list">
+            <ul class="container respirators-list">
                 <li class="respirators-item">
-                    <img src="images/medical-workers-1.png" alt="female medical worker">
+                    <img class="respirators-workers1" src="images/medical-workers-1.png" alt="female medical worker">
                     <div class="respirators-wrapper-text">
                         <h2>N95 Respirators</h2>
                         <p class="respirators-text">
@@ -147,14 +144,14 @@
                             respirators are class II devices regulated by the FDA, under 21 CFR 878.4040, and CDC NIOSH under 42 CFR Part 84.
                         </p>
                     </div>
-                    <img src="images/medical-workers-2.png" alt="male medical worker">
+                    <img class="respirators-workers1" src="images/medical-workers-2.png" alt="male medical worker">
                 </li>
             </ul>
         </section>
         <section>
-            <ul class="made-in">
-                <li class="made-in-wrapper">
-                    <img  src="images/made-in.png" alt="medical workers in masks">
+            <ul class="container made-in made-in-grid">
+                <li class="made-in-wrapper made-in-item">
+                    <img class="made-in-workers" src="images/made-in.png" alt="medical workers in masks">
                     <div class="made-in-blue-rec-1">
                         <p class="made-in-blue-rec-text">
                             Given the praised reputation and reliable quality within the industry, we have also established preliminary business
@@ -162,7 +159,7 @@
                         </p>
                     </div>
                 </li>
-                <li class="made-in-wrapper-2">
+                <li class="made-in-wrapper-2 made-in-item">
                     <div class="made-in-wrapper-white-blue">
                         <div class="made-in-white-rec">
                             <p class="made-in-white-rec-text">
@@ -188,8 +185,7 @@
                         </div>
                         <div class="made-in-wrapper-button">
                             <button class="made-in-button">Learn more</button>
-                            <div class="made-in-wrapper-conxtact">
-                                <!-- <svg></svg> -->
+                            <div class="made-in-wrapper-contact">
                                 <img src="images/phone1.png" alt="phone">
                                 <div>
                                     <p class="made-in-contact-text">Contact us</p>
@@ -202,7 +198,7 @@
             </ul>
         </section>
         <section>
-            <div class="certification">
+            <div class="certification container">
                 <p class="certification-text">Our Lab Certification</p>
                 <div class="certification-wrapper-image">
                     <img src="images/fda.png" alt="certification fda">
@@ -212,7 +208,7 @@
             </div>
         </section>
         <section>
-            <ul class="reasons">
+            <ul class="container reasons">
                 <li>
                     <img src="images/reasons.png" alt="mask">
                 </li>
@@ -222,6 +218,7 @@
                         <p class="respirators-text">
                            All products of Health Pro have obtained the certifications issued by national specialized agencies and testing
                            laboratories.
+                           <br>
                            They have also passed the quality inspection of several international famous testing institutions. We have absolute
                            confidence that every product of Health Pro is a of the top quality.
                         </p>
@@ -259,7 +256,7 @@
                                 </p>
                             </div>
                         </div>
-                    </ul>
+                    </div>
                 </li>
             </ul>
         </section>
@@ -267,7 +264,7 @@
             <img>
         </section>
         <section>
-            <div class="step">
+            <div class="container step">
                 <h2>Get One Step Ahead Of Disease</h2>
                 <div class="step-text">
                     <p>
@@ -279,9 +276,9 @@
             </div>
         </section>
         <section>
-            <div >
-                <ul class="address">
-                    <li class="address-item">
+            <div>
+                <ul class="address container">
+                    <li>
                         <div class="address-wrapper icon-location">
                             <h3>Address</h3>
                             <a class="address-link" href="https://goo.gl/maps/U55JzRCZsnBUYqKL8">123 5th Avenue, New York, US</a>
@@ -303,16 +300,11 @@
             </div>
         </section>
         <section>
-            <img src="images/footer.png" alt="footer">
+            <div class="container">
+                <img src="images/footer.png" alt="footer">
+            </div>
         </section>
     </main>
-    <!-- <footer>
-        <div>
-            <span>
-                Copyright<div></div>2020 N95
-            </span>
-        </div>
-    </footer> -->
     <script src="js/main.js"></script>
 </body>
 </html>
