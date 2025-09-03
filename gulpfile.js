@@ -1,60 +1,73 @@
-const gulp = require("gulp");
+const { src, dest, watch, series, parallel } = require("gulp");
 const sass = require("gulp-sass")(require("sass"));
-const postcss = require("gulp-postcss");
-const autoprefixer = require("autoprefixer");
 const cleanCSS = require("gulp-clean-css");
-const terser = require("gulp-terser");
+const autoprefixer = require("gulp-autoprefixer");
 const browserSync = require("browser-sync").create();
+const del = require("del");
 
-// SCSS → CSS
-function styles() {
-  return gulp.src("src/scss/**/*.scss")
-    .pipe(sass().on("error", sass.logError))
-    .pipe(postcss([autoprefixer()]))
-    .pipe(cleanCSS())
-    .pipe(gulp.dest("dist/css"))
-    .pipe(browserSync.stream());
-}
+// Шляхи
+const paths = {
+  html: {
+    src: "src/*.html",
+    dest: "docs/"
+  },
+  styles: {
+    src: "src/scss/**/*.scss",
+    dest: "docs/css/"
+  },
+  images: {
+    src: "src/images/**/*",
+    dest: "docs/images/"
+  }
+};
 
-// JS
-function scripts() {
-  return gulp.src("src/js/**/*.js")
-    .pipe(terser())
-    .pipe(gulp.dest("dist/js"))
-    .pipe(browserSync.stream());
+// Очистка папки docs
+function clean() {
+  return del(["docs"]);
 }
 
 // HTML
 function html() {
-  return gulp.src("src/**/*.html")
-    .pipe(gulp.dest("dist"))
+  return src(paths.html.src)
+    .pipe(dest(paths.html.dest))
     .pipe(browserSync.stream());
 }
 
-// IMAGES (просто копіювання, без оптимізації)
+// SCSS → CSS
+function styles() {
+  return src(paths.styles.src)
+    .pipe(sass().on("error", sass.logError))
+    .pipe(autoprefixer({ cascade: false }))
+    .pipe(cleanCSS())
+    .pipe(dest(paths.styles.dest))
+    .pipe(browserSync.stream());
+}
+
+// Копіювання картинок
 function images() {
-  return gulp.src("src/images/**/*")
-    .pipe(gulp.dest("dist/images"))
-    .pipe(browserSync.stream());
+  return src(paths.images.src)
+    .pipe(dest(paths.images.dest));
 }
 
-// Сервер
-function serve() {
+// Watch + BrowserSync
+function watchFiles() {
   browserSync.init({
     server: {
-      baseDir: "dist"
-    }
+      baseDir: "docs/"
+    },
+    notify: false
   });
-
-  gulp.watch("src/scss/**/*.scss", styles);
-  gulp.watch("src/js/**/*.js", scripts);
-  gulp.watch("src/**/*.html", html);
-  // gulp.watch("src/images/**/*", images);
+  watch(paths.html.src, html);
+  watch(paths.styles.src, styles);
+  watch(paths.images.src, images);
 }
 
-exports.default = gulp.series(
-  gulp.parallel(styles, scripts, html, images),
-  serve
-);
+// Експорти
+exports.default = series(clean, parallel(html, styles, images), watchFiles);
+exports.build = series(clean, parallel(html, styles, images));
+
+
+
+
 
 
