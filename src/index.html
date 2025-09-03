@@ -16,31 +16,33 @@
 </head>
 <body>
     <header class="header">
-        <div class="container header__container">
-            <a href=".index.html"><div class="logo"></div></a>
-            <nav class="header-menu">
-                <ul class="header-nav">
-                    <li>
-                        <a class="header-nav__link header-nav__link--active" href="./index.html">Home</a>
-                    </li>
-                    <li>
-                        <a class="header-nav__link">About</a>
-                    </li>
-                    <li>
-                        <a class="header-nav__link">Product</a>
-                    </li>
-                    <li>
-                        <a class="header-nav__link">Contact</a>
-                    </li>
-                    <li>
-                        <a class="header-nav__link">History</a>
-                    </li>
-                </ul>
-            </nav>
-            <button class="header-btn-contact">Contact us</button>
-            <button class="header-btn-burger js-open-menu" type="button" aria-expanded="false" aria-controls="mobile-menu">
-                <span class="burger-line"></span>
-            </button>
+        <div class="container">
+            <div class="header-container">
+                <a href=".index.html"><div class="logo"></div></a>
+                <nav class="header-menu">
+                    <ul class="header-nav">
+                        <li>
+                            <a class="header-nav-link header-nav-link--active" href="./index.html">Home</a>
+                        </li>
+                        <li>
+                            <a class="header-nav-link">About</a>
+                        </li>
+                        <li>
+                            <a class="header-nav-link">Product</a>
+                        </li>
+                        <li>
+                            <a class="header-nav-link">Contact</a>
+                        </li>
+                        <li>
+                            <a class="header-nav-link">History</a>
+                        </li>
+                    </ul>
+                </nav>
+                <button class="header-btn-contact" type="button">Contact us</button>
+                <button class="header-btn-burger js-open-menu" type="button" aria-expanded="false" aria-controls="mobile-menu">
+                    <span class="burger-line"></span>
+                </button>
+            </div>
         </div>
     </header>
     <main>
@@ -54,25 +56,25 @@
                         are ideal for influenza or novel coronavirus prevention.
                     </p>
                     <div class="protective-button-wrapper">
-                       <button>Shop now</button>
-                       <button class="protective-button-orange">Learn more</button>
+                       <button type="button">Shop now</button>
+                       <button class="protective-button-orange" type="button">Learn more</button>
                     </div>
                 </li>
                 <li class="protective-image-wrapper">
                     <div>
                         <img class="bg" src="images/mask-group.png" alt="people wearing masks">
-                        <img class="woman" src="images/woman.jpg" alt="photo of a woman in a mask">
+                        <img class="woman" src="images/kn95-face-masks-coronavirus.png" alt="photo of a woman in a mask">
                     </div>   
                 </li>
             </ul>   
         </section>
-        <section>
+        <section class="section-bg">
             <ul class="benefit container">
                 <li class="benefit-item">
                     <svg class="benefit-icon">
                         <use href="images/sprite.svg#icon-box"></use>
                     </svg>
-                    <div class="benefit__box">
+                    <div>
                         <h3>Full-Service Shipping</h3>
                         <p class="benefit-text">From picking to custom-crating to domestic and international shipping, we handle it all for you.</p>
                     </div>
@@ -99,14 +101,12 @@
                     <svg class="benefit-icon">
                         <use href="images/sprite.svg#icon-credit-card"></use>
                     </svg>
-                    <div class="">
+                    <div>
                         <h3>Secure and Easy Payment Methods</h3>
                         <p class="benefit-text">Pay your way, whether by credit card, PayPal or the redemption of earned credits.</p>
                     </div>
                 </li>
             </ul>
-        </section>
-        <section>
             <ul class="container respirators-list">
                 <li class="respirators-item">
                     <img class="respirators-workers1" src="images/medical-workers-1.png" alt="female medical worker">
@@ -147,8 +147,6 @@
                     <img class="respirators-workers1" src="images/medical-workers-2.png" alt="male medical worker">
                 </li>
             </ul>
-        </section>
-        <section>
             <ul class="container made-in made-in-grid">
                 <li class="made-in-wrapper made-in-item">
                     <img class="made-in-workers" src="images/made-in.png" alt="medical workers in masks">
@@ -184,7 +182,7 @@
                             </p>
                         </div>
                         <div class="made-in-wrapper-button">
-                            <button class="made-in-button">Learn more</button>
+                            <button class="made-in-button" type="button">Learn more</button>
                             <div class="made-in-wrapper-contact">
                                 <img src="images/phone1.png" alt="phone">
                                 <div>
@@ -196,8 +194,6 @@
                     </div>
                 </li>
             </ul>
-        </section>
-        <section>
             <div class="certification container">
                 <p class="certification-text">Our Lab Certification</p>
                 <div class="certification-wrapper-image">
@@ -259,11 +255,53 @@
                     </div>
                 </li>
             </ul>
-        </section>
-        <section>
-            <img>
-        </section>
-        <section>
+            <div class="reviews container">
+                <div class="review">
+                    <div class="review-stars">
+                        ★★★★☆
+                    </div>
+                    <p class="review-text">
+                        “Great service, fast delivery and top quality products. Highly recommend to everyone!”
+                    </p>
+                    <div class="review-author">
+                        <img src="images/user1.png" alt="User photo" class="review-photo">
+                        <div>
+                            <h3 class="review-name">Maria Eve</h3>
+                            <p class="review-job">Lawyer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="review">
+                    <div class="review-stars">
+                        ★★★★★
+                    </div>
+                    <p class="review-text">
+                        “Excellent support team, they answered all my questions. Will buy again!”
+                    </p>
+                    <div class="review-author">
+                        <img src="images/user2.png" alt="User photo" class="review-photo">
+                        <div>
+                            <h3 class="review-name">Liam Bower</h3>
+                            <p class="review-job">Mechanic</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="review">
+                    <div class="review-stars">
+                        ★★★★★
+                    </div>
+                    <p class="review-text">
+                        “Excellent support team, they answered all my questions. Will buy again!”
+                    </p>
+                    <div class="review-author">
+                        <img src="images/user3.png" alt="User photo" class="review-photo">
+                        <div>
+                            <h3 class="review-name">Nicky</h3>
+                            <p class="review-job">Dancer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="container step">
                 <h2>Get One Step Ahead Of Disease</h2>
                 <div class="step-text">
@@ -274,10 +312,8 @@
                 </div>
                 <button>Shop now</button>
             </div>
-        </section>
-        <section>
             <div>
-                <ul class="address container">
+                <ul class="address">
                     <li>
                         <div class="address-wrapper icon-location">
                             <h3>Address</h3>
@@ -298,11 +334,7 @@
                     </li>
                 </ul>
             </div>
-        </section>
-        <section>
-            <div class="container">
-                <img src="images/footer.png" alt="footer">
-            </div>
+            <div class="footer-img"></div>
         </section>
     </main>
     <script src="js/main.js"></script>
